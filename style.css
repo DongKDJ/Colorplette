@@ -6,6 +6,7 @@
 
 body {
   height: 100vh;
+  height: 100dvh; /* 모바일 브라우저 UI 고려한 실제 뷰포트 높이 */
   overflow: hidden;
   font-family: 'Segoe UI', system-ui, sans-serif;
   background: #111;
@@ -14,10 +15,13 @@ body {
 #palette {
   display: flex;
   height: calc(100vh - 48px);
+  height: calc(100dvh - 48px);
 }
 
 .panel {
   flex: 1;
+  min-height: 0; /* flex 축소 보장 */
+  min-width: 0;
   position: relative;
   display: flex;
   flex-direction: column;
