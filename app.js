@@ -133,6 +133,9 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// 모바일 생성 버튼
+document.getElementById('generate-btn').addEventListener('click', refresh);
+
 // 시작
 initPanels();
 refresh();
